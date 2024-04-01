@@ -70,3 +70,40 @@ celsiusToFahrenheit(38);
 fahrenheitToCelsius(100.4);
 totalPrice(120);
 writeMessage('Lucas', 'gafas', 'mediano', '¡Qué buen servicio!');
+
+console.clear();
+
+function arithmeticMean(num1, num2, num3) {
+  const mean = (num1 + num2 + num3) / 3;
+  return mean;
+}
+
+function discountPrice(discount, price) {
+  const finalPrice = price - discount;
+  return finalPrice;
+}
+
+function wordPlusWord(word1, word2) {
+  const newWord = word1 + word2;
+  return newWord;
+}
+
+function convertToMiters(km) {
+  const miters = km * 1000;
+  return miters;
+}
+
+function convertToSeconds(hour) {
+  const seconds = hour * 3600;
+  return seconds;
+}
+
+function convertToMitersPerSecond(kmPerH) {
+    const mitersPerSecond = 
+}
+
+console.log(arithmeticMean(4, 6, 2));
+console.log(discountPrice(20, 100));
+console.log(wordPlusWord('Pené', 'lope'));
+console.log(convertToSeconds(4));
+
