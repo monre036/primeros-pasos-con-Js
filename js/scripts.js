@@ -13,12 +13,12 @@ function calculateTriangleArea(base, heigth) {
   const triangleArea = base * heigth;
   console.log(
     'El área del triángulo con base ' +
-      base +
-      ' y altura ' +
-      heigth +
-      ' es ' +
-      triangleArea +
-      '.'
+    base +
+    ' y altura ' +
+    heigth +
+    ' es ' +
+    triangleArea +
+    '.'
   );
 }
 
@@ -52,13 +52,13 @@ function totalPrice(price) {
 function writeMessage(name, material, size, note) {
   console.log(
     name +
-      ' ha pedido una caja de ' +
-      material +
-      ' de tamaño ' +
-      size +
-      '. ' +
-      note +
-      '.'
+    ' ha pedido una caja de ' +
+    material +
+    ' de tamaño ' +
+    size +
+    '. ' +
+    note +
+    '.'
   );
 }
 
@@ -99,11 +99,25 @@ function convertToSeconds(hour) {
 }
 
 function convertToMitersPerSecond(kmPerH) {
-    const mitersPerSecond = 
+  const miters = convertToMiters(kmPerH);
+  const mitersPerSecond = miters / 3600;
+  return mitersPerSecond;
 }
 
-console.log(arithmeticMean(4, 6, 2));
-console.log(discountPrice(20, 100));
-console.log(wordPlusWord('Pené', 'lope'));
-console.log(convertToSeconds(4));
+const mean = arithmeticMean(4, 6, 2);
+console.log(mean);
 
+const finalPrice = discountPrice(20, 100);
+console.log(finalPrice);
+
+const newWord = wordPlusWord('Pené', 'lope');
+console.log(newWord);
+
+const miters = convertToMiters(80);
+console.log(miters);
+
+const seconds = convertToSeconds(4);
+console.log(seconds);
+
+const mitersPerSecond = convertToMitersPerSecond(100);
+console.log(mitersPerSecond);
