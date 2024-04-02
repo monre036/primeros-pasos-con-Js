@@ -13,12 +13,12 @@ function calculateTriangleArea(base, heigth) {
   const triangleArea = base * heigth;
   console.log(
     'El área del triángulo con base ' +
-    base +
-    ' y altura ' +
-    heigth +
-    ' es ' +
-    triangleArea +
-    '.'
+      base +
+      ' y altura ' +
+      heigth +
+      ' es ' +
+      triangleArea +
+      '.'
   );
 }
 
@@ -52,13 +52,13 @@ function totalPrice(price) {
 function writeMessage(name, material, size, note) {
   console.log(
     name +
-    ' ha pedido una caja de ' +
-    material +
-    ' de tamaño ' +
-    size +
-    '. ' +
-    note +
-    '.'
+      ' ha pedido una caja de ' +
+      material +
+      ' de tamaño ' +
+      size +
+      '. ' +
+      note +
+      '.'
   );
 }
 
@@ -73,51 +73,43 @@ writeMessage('Lucas', 'gafas', 'mediano', '¡Qué buen servicio!');
 
 console.clear();
 
-function arithmeticMean(num1, num2, num3) {
+const arithmeticMean = (num1, num2, num3) => {
   const mean = (num1 + num2 + num3) / 3;
   return mean;
-}
+};
 
-function discountPrice(discount, price) {
-  const finalPrice = price - discount;
+const discountPrice = (discount, price) => {
+  const finalPrice = price - discount / 100;
   return finalPrice;
-}
+};
 
-function wordPlusWord(word1, word2) {
-  const newWord = word1 + word2;
-  return newWord;
-}
+const wordPlusWord = (word1, word2) => word1 + word2;
 
-function convertToMiters(km) {
-  const miters = km * 1000;
-  return miters;
-}
+const convertToMeters = km => km * 1000;
 
-function convertToSeconds(hour) {
-  const seconds = hour * 3600;
-  return seconds;
-}
+const convertToSeconds = hour => hour * 3600;
 
-function convertToMitersPerSecond(kmPerH) {
-  const miters = convertToMiters(kmPerH);
-  const mitersPerSecond = miters / 3600;
-  return mitersPerSecond;
-}
+const convertToMetersPerSecond = kmPerH => {
+  const meters = convertToMeters(kmPerH);
+  const seconds = convertToSeconds(1);
+  const metersPerSecond = meters / seconds;
+  return metersPerSecond;
+};
 
 const mean = arithmeticMean(4, 6, 2);
-console.log(mean);
+console.log('La media es ' + mean);
 
 const finalPrice = discountPrice(20, 100);
-console.log(finalPrice);
+console.log(finalPrice + ' €');
 
 const newWord = wordPlusWord('Pené', 'lope');
 console.log(newWord);
 
-const miters = convertToMiters(80);
-console.log(miters);
+const miters = convertToMeters(80);
+console.log(miters + ' m');
 
 const seconds = convertToSeconds(4);
-console.log(seconds);
+console.log(seconds + ' s');
 
-const mitersPerSecond = convertToMitersPerSecond(100);
-console.log(mitersPerSecond);
+const metersPerSecond = convertToMetersPerSecond(100);
+console.log(metersPerSecond + ' m/s');
